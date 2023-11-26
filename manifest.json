@@ -23,5 +23,8 @@
         },
         "default_popup": "popup/popup.html",
         "default_title": "Binge Ad Auto Skip"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
     }
 }
