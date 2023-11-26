@@ -36,7 +36,3 @@ The Binge Ad Skipper Chrome Extension is a simple browser extension designed to 
 ## Contributing
 
 If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/your-username/your-extension-repo/issues). Feel free to contribute by submitting pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
