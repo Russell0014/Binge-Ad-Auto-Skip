@@ -2,6 +2,7 @@
     "manifest_version": 3,
     "name": "Binge Ad Auto Skip",
     "version": "0.1",
+    "permissions": ["storage"],
     "description": "Fast forwards through ads on binge.com.au",
     "content_scripts": [
         {

@@ -5,13 +5,15 @@ const isEdge = /edg/i.test(ua);
 const config = { attributes: true, childList: true, subtree: true };
 const videoSpeed = 1;
 
+
+// BingeObserver initialization
+const BingeObserver = new MutationObserver(bingeSkipAds);
+
 // Function to start BingeObserver
 function startBinge() {
     BingeObserver.observe(document, config);
 }
 
-// BingeObserver initialization
-const BingeObserver = new MutationObserver(bingeSkipAds);
 
 // Function to handle mutations and skip ads
 function bingeSkipAds() {
@@ -35,5 +37,9 @@ function bingeSkipAds() {
     }
 }
 
-// Start BingeObserver if on Binge website
-if (isBinge) startBinge();
+// Retrieve user's choice from storage
+chrome.storage.sync.get(['adSkipEnabled'], function (result) {
+    const adSkipEnabled = result.adSkipEnabled !== undefined ? result.adSkipEnabled : true;
+    // Starts BingeObserver if adSkipEnabled is true
+    if (isBinge && adSkipEnabled) startBinge();
+});

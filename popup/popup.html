@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Popup</title>
+    <title>Binge Extension Popup</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <h2>Binge Ad Skipper</h2>
+    <p>This extension is active on Binge.com.au.</p>
+    <p>Toggle the switch below to enable or disable ad skipping:</p>
 
+    <div class="toggle-container">
+        <label class="toggle-label">Ad Skip:</label>
+        <label class="toggle-switch">
+            <input type="checkbox" id="adSkipToggle" checked>
+            <span class="toggle-slider"></span>
+        </label>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 
 </html>
