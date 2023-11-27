@@ -4,7 +4,7 @@
 </div>
 
 ## Install from chrome web store (click on image)
-<a href="">
+<a href="https://chromewebstore.google.com/u/2/detail/binge-ad-auto-skip/mpmmeiphonaghfceejhlmmfjmnmkjpdl?hl=en-GB">
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" width="8%" alt="chrome">
 </a>
 
