@@ -31,6 +31,9 @@ function bingeSkipAds() {
 
             // Adjust playback rate based on ad detection
             video.playbackRate = isNegative ? playBackRate : videoSpeed;
+
+            // Mutes the video if the video length is negative
+            video.muted = isNegative;
         }
     } catch (error) {
         console.error('Error:', error);
