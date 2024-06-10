@@ -19,7 +19,7 @@ function startBinge() {
 function bingeSkipAds() {
     try {
         const video = document.querySelector('video');
-        const videoLength = document.querySelector('.lonZvL');
+        const videoLength = document.querySelector('[role="timer"]');
 
         if (video) {
             const videoLengthText = videoLength?.textContent?.trim();
