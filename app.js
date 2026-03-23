@@ -11,7 +11,7 @@ const BingeObserver = new MutationObserver(bingeSkipAds);
 
 // Function to start BingeObserver
 function startBinge() {
-    BingeObserver.observe(document, config);
+    BingeObserver.observe(document.body, config);
 }
 
 
@@ -19,21 +19,15 @@ function startBinge() {
 function bingeSkipAds() {
     try {
         const video = document.querySelector('video');
-        const videoLength = document.querySelector('[role="timer"]');
 
         if (video) {
-            const videoLengthText = videoLength?.textContent?.trim();
-            // Default to false if videoLengthText is undefined
-            const isNegative = videoLengthText?.includes('-') || false;
-
-            // Set playback rate based on browser
+            const isAd =
+                document.querySelector('[data-ad-countdown]') ||
+                document.querySelector('[data-test-id="AD_COUNTDOWN_LABEL"]');
             const playBackRate = isEdge ? 3 : 8;
 
-            // Adjust playback rate based on ad detection
-            video.playbackRate = isNegative ? playBackRate : videoSpeed;
-
-            // Mutes the video if the video length is negative
-            video.muted = isNegative;
+            video.playbackRate = isAd ? playBackRate : videoSpeed;
+            video.muted = isAd;
         }
     } catch (error) {
         console.error('Error:', error);
